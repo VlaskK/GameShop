@@ -4,6 +4,9 @@ import {
   Routes as Switch,
   Route
 } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./redux"
+
 import HomePage from "./Pages/home-page/home-page";
 
 import Header from "./Components/header/Header";
@@ -11,15 +14,17 @@ import Header from "./Components/header/Header";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header/>
-        <Switch>
-          <Route exact path="/" element={<HomePage/>}/>
-          
-        </Switch>
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <div className="App">
+          <Header />
+          <Switch>
+            <Route exact path="/" element={<HomePage />} />
+          </Switch>
+        </div>
+      </Router>
+    </Provider>
+
   );
 }
 
