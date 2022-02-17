@@ -9,10 +9,10 @@ function Header() {
             <div className='wrapper'>
                 <Link to="/" className='header__store-title'>
                     Game Store
-                </Link> 
+                </Link>
             </div>
             <div className='wrapper header__cart-btn-wrapper'>
-                <CartBlock/>
+                <CartBlock />
             </div>
         </div>
     );

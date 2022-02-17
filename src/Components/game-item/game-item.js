@@ -1,23 +1,31 @@
 import React from 'react';
+import{ useNavigate } from "react-router"
+import { useDispatch } from 'react-redux';
 import GameBuy from '../game-buy/game-buy';
 import GameCover from '../game-cover/game-cover';
-import GameGenre from '../game-genre/geme-genre';
+import GameGenresList from '../game-genres-list/game-genres-list';
+import { setCurrGame } from '../../redux/game/reducer';
 import "./game-item.css";
 
-function GameItem({game}) {
+function GameItem({ game }) {
+    const history = useNavigate();
+    const dispatch = useDispatch();
 
+    const handleClick = () => {
+        dispatch(setCurrGame(game));
+        console.log(game.title)
+        history(`/app/${game.title}`)
+    }
 
     return (
-        <div className='game-item'>
+        <div className='game-item' onClick={handleClick}>
             <GameCover image={game.image}/>
             <div className='game-item__details'>
                 <span className='game-item__title'>{game.title}</span>
-                <div className='game-item__genre'> 
-                    {game.genres.map(genre => <GameGenre genre={genre} key={genre}/>)}
-                </div>
+                <GameGenresList game={game}/>
                 <div className='game-item__buy'>
-                    <GameBuy game={game}/>
-                 </div>
+                    <GameBuy game={game} />
+                </div>
             </div>
         </div>
     );

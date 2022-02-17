@@ -59,10 +59,10 @@ const GAMES = [
     },
 ]
 
-const HomePage = () =>{
+const HomePage = () => {
     return (
         <div className="home-page">
-            {GAMES.map(game => <GameItem game = {game} key={game.id}/>)} 
+            {GAMES.map(game => <GameItem game={game} key={game.id} />)}
         </div>
     );
 }

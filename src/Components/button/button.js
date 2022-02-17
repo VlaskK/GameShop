@@ -19,7 +19,7 @@ const Button = ({
 
     return (
         <button className={btnClass} onClick={onClick}>
-            { children }
+            {children}
         </button>
     );
 };

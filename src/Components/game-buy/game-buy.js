@@ -16,19 +16,19 @@ function GameBuy({ game }) {
 
     const handleClick = (e) => {
         e.stopPropagation();
-        
-        isItemInCart?  dispatch(removeItemInCart(game.id)) : dispatch(setItemInCart(game))
-        
+
+        isItemInCart ? dispatch(removeItemInCart(game.id)) : dispatch(setItemInCart(game))
+
     }
 
     return (
         <div className='game-buy'>
             <span className='game-buy__price'>{game.price} руб.</span>
             <Button
-                type={isItemInCart? "secondary" : "primary"}
+                type={isItemInCart ? "secondary" : "primary"}
                 onClick={handleClick}>
                 {
-                    isItemInCart? "Убрать из корзины" : "В Корзину"
+                    isItemInCart ? "Убрать из корзины" : "В Корзину"
                 }
             </Button>
         </div>

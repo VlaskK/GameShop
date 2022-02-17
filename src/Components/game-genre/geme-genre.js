@@ -1,10 +1,10 @@
 import React from 'react';
 import "./game-genre.css"
 
-function GameGenre({genre}) {
+function GameGenre({ genre }) {
     return (
         <span className='game-genre'>
-            { genre }
+            {genre}
         </span>
     );
 }
