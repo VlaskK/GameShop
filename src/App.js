@@ -11,7 +11,7 @@ import HomePage from "./Pages/home-page/home-page";
 import OrderPage from "./Pages/order-page/order-page";
 import Header from "./Components/header/Header";
 import GamePage from "./Pages/game-page/game-page";
-
+import FavPage from "./Pages/fav-page/fav-page";
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/app/:title" element={<GamePage/>} />
             <Route exact path="/order" element={<OrderPage />} />
+            <Route exact path="/favorite" element={<FavPage/>}/>
           </Switch>
         </div>
       </Router>

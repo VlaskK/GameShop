@@ -33,3 +33,8 @@
     right: 0;
     bottom: -12px;
 }
+.game-item__fav {
+    position: absolute;
+    right: 0;
+    bottom: 270px;
+}

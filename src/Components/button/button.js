@@ -14,7 +14,8 @@ const Button = ({
         'btn--secondary': type === 'secondary',
         'btn--primary': type === 'primary',
         'btn--small': type === 's',
-        'btn--medium': type === 'm'
+        'btn--medium': type === 'm',
+        'btn--favorite': type === "fav" 
     })
 
     return (

@@ -11,7 +11,7 @@ import { BiCartAlt } from 'react-icons/bi'
 import "./cart-block.css"
 
 
-function CartBlock(props) {
+function CartBlock() {
     const [isCartMenuVisible, setIsCartMenuVisible] = useState(false)
     const items = useSelector(state => state.cart.itemsInCart);
     const totalPrice = calcTotalPrice(items)

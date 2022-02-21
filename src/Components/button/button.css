@@ -6,6 +6,7 @@
     cursor: pointer;
 }
 
+
 .btn--primary {
     background-color: rgb(85, 88, 237);
 }
@@ -20,4 +21,8 @@
 
 .btn--medium {
     font-size: 18px;
+}
+
+.btn--fav {
+    background-color: transparent;
 }

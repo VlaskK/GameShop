@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import GameBuy from '../game-buy/game-buy';
 import GameCover from '../game-cover/game-cover';
 import GameGenresList from '../game-genres-list/game-genres-list';
+import GameFav from '../game-fav/game-fav';
 import { setCurrGame } from '../../redux/game/reducer';
 import "./game-item.css";
 
@@ -25,6 +26,9 @@ function GameItem({ game }) {
                 <GameGenresList game={game}/>
                 <div className='game-item__buy'>
                     <GameBuy game={game} />
+                </div>
+                <div className='game-item__fav'>
+                    <GameFav game={game}/>
                 </div>
             </div>
         </div>
