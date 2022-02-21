@@ -1,0 +1,8 @@
+.game-fav__heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    color: rgb(80, 82, 84);
+}

@@ -1,0 +1,5 @@
+.game-item__gengre {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
